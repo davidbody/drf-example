@@ -9,5 +9,5 @@ class ViewsTest(APITestCase):
         """
         url = reverse('total-views')
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, {'total_views': 123456789})
